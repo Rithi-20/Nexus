@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <style>
+
+.search{
+    width: 50%;
+    height: 30px;
+    margin-left: 25%;
+    margin-top: -20px;
+    text-align: center;
+         }
+.imgpro{
+    margin-top: 4%;
+    margin-left: 8%;
+    height: 270px;
+    width: 270px;
+}
+form{
+    margin-left: 25%;
+    margin-right: 15%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.lab{
+    margin-left: 170%;
+}
+.in{
+    margin-left: 120%;
+    height: 30px;
+    width: 200px;
+}
+
+footer{
+    background-image: url(img1.jpg);
+    text-align: center;
+    padding: 2%;
+    margin-top: 10%;
+}
+    </style>
+    <header>
+        <div style="display: inline;">
+        <ul>
+            <li style="color: darkblue; margin-left: -25px;" ><i>NEXUS</i></li>
+            <li style="margin-left: 40px;"><a href="project.html" style="color: black; font-size: 20px; ">HOME |</a></li>
+            <li><a href="about.html" style="color: black; font-size: 20px;">ABOUT US |</a></li>
+            <li><a href="signup.html" style="color: black; font-size: 20px;">SIGNUP </a></li>
+        </ul>
+    </div>
+    <details class="con">
+        <summary style="border-radius: 3%;  border-style: outset;">LOGIN</summary>
+        <li style="font-size:20px ;"><a href="Administrator.html" style="color: black;">Admin</a></li><br>
+        <li  style="font-size:20px ;"><a href="worker.html" style="color: black;">Worker</a></li><br>
+        <li  style="font-size:20px ;"><a href="user.html" style="color: black;">User</a></li>
+    </details>
+    </header>
+    <nav>
+        <h1 style="margin-left: 35%;">Locate Worker's Profile quickly</h1>
+        <input class="search" type="text" name="search" placeholder="Search">
+    </nav>
+    <!-- <image src="img15.jpg" class="imgpro"></image> -->
+    <script>
+        function validate(){
+            usn=document.forms["login"]["user"];
+            age=document.forms["login"]["age"];
+            eml=document.forms["login"]["email"];
+            add=document.forms["login"]["add"];
+            Dob=document.forms["login"]["dob"];
+            gen=document.forms["login"]["gender"];
+            phn=document.forms["login"]["number"];
+            psn=document.forms["login"]["pass"];
+            pro=document.forms["login"]["profile"];
+            if(usn.value==""){
+                alert("Please fill the Username field..!");
+                usn.focus()
+                return false
+            }
+            if(age.value==""){
+                alert("Please fill the Age field..!");
+                age.focus()
+                return false
+            }
+            else if(eml.value==""){
+                window.alert("Please fill the Email field..!");
+                eml.focus()
+                return false
+            }
+            if(add.value==""){
+                alert("Please fill the Address field..!");
+                add.focus()
+                return false
+            }
+            else if(dob.value==""){
+                window.alert("Please fill the Date of birth field..!");
+                dob.focus()
+                return false
+            }
+            else if(gen.value==""){
+                window.alert("Please select your Gender..!");
+                gen.focus()
+                return false
+            }
+           
+            else if(phn.value==""){
+                window.alert("Please fill the Phone number field..!");
+                phn.focus()
+                return false
+            }
+            else if(psn.value==""){
+                window.alert("Please fill the Password field..!");
+                psn.focus()
+                return false
+            }
+            else if(pro.value==""){
+                window.alert("Please upload your profile..!");
+                pro.focus()
+                return false
+            }
+            else {
+                window.alert("Please fill the required field..!");
+                return false
+            }
+        }
+    </script>
+
+    
+     
+    <form  action="" name="login" onsubmit="return validate()">
+        
+       
+            <fieldset style="text-align: center; background-image: url(img1.jpg); line-height: 0.6;">
+                
+                <legend><h1>Register Form</h1></legend>
+            
+            <table>
+                <tr>
+            <td><label class="lab">Username</label></td>
+            <td><input class="in" type="text" name="user"  placeholder="Enter Username" ></td><br>
+        </tr>
+        <tr>
+            <td><label class="lab">Age</label></td>
+            <td><input class="in" type="number" name="age"  placeholder="Enter your Age" ></td><br>
+        </tr>
+            <tr>
+                <td><label  class="lab">EmailId</label></td>
+            <td><input class="in" type="text" name="email"  placeholder="Enter your Email" ></td><br>
+        </tr>
+        <tr>
+            <td><label class="lab">Address</label></td>
+            <td><input class="in" type="number" name="add"  placeholder="Enter your Address" ></td><br>
+        </tr>
+            <tr>
+                <td><label  class="lab">Date_of_Birth</label></td>
+            <td><input class="in" type="date" name="dob"  placeholder="Enter your Date of Birth" ></td><br>
+        </tr>
+       
+            <tr>
+                <td><label  class="lab">Gender</label></td>
+                <td><label  style="margin-left: 120% ;">Male</label></td>
+                <td><input style="margin-left: 450%;" type="radio" name="gender"></td>
+                <td><label style="margin-left: 150% ;">Female</label></td>
+                <td><input  style="margin-left: 450%;" type="radio" name="gender"></td>
+        </tr>
+       
+        
+            <tr>
+                <td><label  class="lab">Phone_number</label></td>
+            <td><input class="in" type="number" name="number"  placeholder="Enter your Phone number" ></td><br>
+        </tr>
+            <tr>
+                <td><label  class="lab">Password</label></td>
+            <td><input class="in" type="password" name="pass"  placeholder="Enter your Password" ></td><br>
+        </tr>
+        <tr>
+            <td><label  class="lab">Profile</label></td>
+        <td><input class="in" type="file" name="profile"  placeholder="Upload your profile" ></td><br>
+    </tr>
+
+        <tr>
+            <td></td>
+            <td><input class="in" type="submit" name="submit" value="Register"  style="margin-left: 70%;" ></td>
+        </tr>
+       
+    
+        </table>
+    </fieldset>
+
+    </form>
+
+    <footer>Copyright.All rights are reserved</footer>
+</body>
+</html>

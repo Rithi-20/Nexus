@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <details id="con">
+                <summary class="tec" ><a href="" style="color: white;">Login</a></summary>
+                <a href="Administrator.html" style="color: white;">Admin</a>
+                <a href="worker.html" style="color: white;">Worker</a>
+                <a href="customer.html" style="color: white;">cutomer</a>
+            </details>
+            <ul>
+                <li><a href="project.html" style="color: white;">HOME |</a></li>
+                <li><a href="" style="color: white;">LOGIN |</a></li>
+                <!-- <li><a href="signup.html" style="color: white;">SIGNUP </a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <style>
+        form{
+            padding-left: 25%;
+            padding-top: 15%;
+            padding-right: 25%;
+            padding-bottom: 25%;
+        }
+        #eg{
+            color: darkblue;
+        }
+    </style>
+    <script>
+        function validate(){
+            usn=document.forms["login"]["user"];
+            psn=document.forms["login"]["pass"];
+            if(usn.value==""){
+                window.alert("Please fill the username field..!");
+                usn.focus()
+                return false
+            }
+            else if(psn.value=="");{
+                window.alert("Please fill the password field..!");
+                psn.focus()
+                return false
+            }
+            elseif(psn.value=="" && usn.value=="");{
+                window.alert("Please fill Username and Password field..!");
+                psn.focus()
+                return false
+            }
+            else{
+                window.alert("Login successfully");
+                return true
+            }
+        }
+    </script>
+
+    <form action="" name="login" onsubmit="return validate()">
+       
+        <fieldset>
+            <legend id="eg" color="blue" align="center"><h1>Worker Login</h1></legend>
+        <table>
+            <tr>
+        <td><label align="center">Username</label></td>
+        <td><input type="text" name="user" align="center" placeholder="Enter username"></td><br>
+    </tr>
+        <tr>
+            <td><label align="center">Password</label></td>
+        <td><input type="password" name="pass" align="center" placeholder="Enter your password"></td><br>
+    </tr>
+    <tr>
+        <td><input type="submit" value="login" align="center"></td>
+    </tr>
+    </table>
+</fieldset>
+
+    </form>
+    <footer><p>Copyright .All rights are reserved</p></footer> 
+</body>
+</html>

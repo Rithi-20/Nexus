@@ -1,0 +1,229 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="icon" href="icon.jpeg"> 
+</head>
+<body >
+    <script>
+
+function validate(){
+             usn=document.forms["login"]["input2"];
+             psn=document.forms["login"]["pass"];
+            
+        if(usn.value==""){
+            alert("Please fill the name field");
+            usn.focus()
+            return false
+        }
+        else if(psn.value==""){
+            alert("Please fill the phonenumber field");
+            usn.focus()
+            return false
+        }
+       
+        else {
+            alert("Register Successfully");
+            return false
+        }
+       
+        
+    }
+        </script>
+    <style>
+        *{
+    margin: 0;  
+}
+header{
+    position: fixed;
+    width: 100%;
+    margin-top: -25px;
+      
+}
+h1{
+    color: black;
+    display: inline;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+nav{
+    background-color: lightblue;
+    color: black;
+    padding: 15px;
+   
+    
+}
+ul,li,p{
+    list-style: none;
+    display: inline;
+    font-size: 20px;
+    
+}
+.login{
+    display: inline-block;
+    
+    
+}
+ul{
+    margin-left: 60%;
+    display: flex;
+    cursor: pointer;
+    
+}
+li:hover,.one:hover,.two:hover,.three:hover,.four:hover{
+    color: blue;
+}
+.first{
+    margin-left: 40%;
+   
+}
+.dada{
+    background-color: lightblue;
+}
+.adform{
+   
+    width: 400px;
+    margin-top: 109px;
+    margin-left: 150px;
+    font-size: 25px;
+
+}
+.input2{
+    height: 50px;
+    width: 300px;
+}
+.hello{
+    background-color: lightblue;
+    margin-top:1%;
+    padding: 30px;
+    text-align: center;
+    color: black;
+    
+}
+.gender{
+    margin-left: 32%;
+    
+}
+    </style>
+    <header> 
+        <nav> 
+            <h1>Best Online Doctor Consultation</h1>
+            <ul>
+                <li> <a href="home.py"style="color: black;">Home |</a>  </li>
+                <li><a href="./about.py"style="color: black;">About |</a></li>
+                <li>Location | </li>
+                <li> <a href="register.py" style="color: black;" >Register | </a></li>
+                <details class="login">
+                    <summary class="one">Log in</summary>
+                    <p class="two"> <a href="admin.py"style="color: black;">Admin</a></p><br>
+                    <p class="three"><a href="./doctor.py" style="color: black;">Doctor</a></p><br>
+                    <p class="four"><a href="./patient.py" style="color: black;">Patient</a> </p><br>
+                    
+                </details>
+            </ul>
+        </nav>
+    </header> 
+    <br>
+    <form  class="adform" name="login"  method="post" enctype="multipart/form-data" onsubmit=" return validate()">
+        
+        <fieldset style="width: 600px;" class="dada">
+            <legend align="center" style="font-size: 30px;">Registration Form</legend>
+            <table>
+                <tr>
+                    <td >Name</td>
+                    <td><input type="text"  placeholder="Enter your name" class="input2" name="input" ></td>
+                </tr>
+                <tr>
+                    <td >Age</td>
+                    <td><input type="number"  placeholder="Enter your age" class="input2"  name="age"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio"  class="gender" name="gender" style="margin-left: -2%;" >Male</td>
+                    <td><input type="radio"  class="gender"  name="gender" style="margin-left: -290%;" >Female</td>
+                </tr>
+                <tr>
+                    <td >DOB</td>
+                    <td><input type="date"  class="input2" name="dateof" ></td>
+                </tr>
+                <tr>
+                <td>Degree</td>
+                <td><input type="text" placeholder="Enter your Qualification" class="input2" name="degree"></td>
+            </tr>
+            <tr>
+                <td>UIDNo</td>
+                <td><input type="number" placeholder="Enter your unique UID number" class="input2" name="no"></td>
+            </tr>
+            <tr>
+                <td>Proof </td>
+                <td><input type="file" class="input2" name="proof"></td>
+            </tr>
+        </tr>
+        <td>profile</td>
+        <td><input type="file"  class="input2" name="profile"></td>
+    </tr>
+            <td>EmailID</td>
+                <td><input type="email" placeholder="Enter your Email" class="input2" name="email"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" placeholder="Enter your address" class="input2" name="add"></td>
+            </tr>
+            <tr>
+                <td>Phone number</td>
+                <td><input type="number" placeholder="Enter your mobile number" class="input2" name="pass" ></td>
+            </tr>
+            <td>Username</td>
+    <td><input type="text" placeholder="Enter your username" class="input2"  name="users"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" placeholder="Enter your password" class="input2" name="ps"></td>
+</tr>
+            <tr>
+            <td><label>Choose the type </label></td>
+                <td><label >Doctor Specialist</label></td>
+                 <td><input type="checkbox" style="margin-left: -190% ;"name="docs" value="doctor Specialist" style="margin-right: ;"></td>
+                <td><label style="margin-left: -180%;">Child Specialist</label></td>
+            <td><input type="checkbox" style="margin-left: -990% ;"name="docs" value="Child Specialist"></td>
+            <td><label style="margin-left: -100% ;" name="typo">Heart Specialist</label></td>
+            <td><input type="checkbox" style="margin-left: -640% ;" name="docs" value="Heart Specialist"></td>
+            <td><label name="typo" style="margin-left: -80% ;">MBBS</label ></td>
+            <td><input type="checkbox" style="margin-left: -750% ;" name="docs" value="MBBS"></td>
+            <td> <label name="typo" style="margin-left: -130% ;">Dentist</label></td>
+            <td> <input type="checkbox" style="margin-left: -750% ;" name="docs" value="Dentist"></td>
+                
+            </tr>
+        <tr name="typo">
+                
+            <td ><label name="typo" > Timing </label></td>
+            <td><label name="typo">Consultation</label></td>
+            <td><input type="checkbox" style="margin-left: -230% ;"name="typo" value="Consultation"></td>
+            <td><label style="margin-left: -190% ;" name="typo">Awareness Camp</label></td>
+            <td><input type="checkbox" style="margin-left: -1000% ;" name="typo" value="Awareness Camp"></td>
+            <td><label name="typo" style="margin-left: -100% ;">Counselling</label ></td>
+            <td><input type="checkbox" style="margin-left: -900% ;" name="typo" value="Counselling"></td>
+            <td> <label name="typo" style="margin-left: -100% ;">Rid of addiction</label></td>
+            <td> <input type="checkbox" style="margin-left: -120% ;" name="typo" value="Rid of addiction"></td>
+   
+             </tr>
+    </tr>
+    
+        <tr >
+            <td></td>
+            <td ><input type="submit" value="Register" style="background-color: red; color: white;" name="submit"></td>
+        </tr>
+            </table>
+        
+        </fieldset>
+    </form>
+    <footer class="hello">
+        <h3 > 2/440,Marutham Poo Street,Vinoba Nagar,Karmathampatti,Coimbatore-641659</h3>
+        <h3 >Copyright © 2024 | All rights reserved.</h3>
+    </footer>
+    </body>
+    </html>
